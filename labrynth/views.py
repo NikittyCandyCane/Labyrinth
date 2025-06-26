@@ -13,6 +13,9 @@ def keep_walking(request):
         
     return render(request, 'labrynth/keep_walking.html', context = {'firstbuttonclicked' : False})
 
+def asleep1(request):
+     return render(request, 'labrynth/asleep1.html', context = {})
+
 # login function for later if I figure out how forms work...
 #def signup(request):
 #    return render(request, 'labrynth/signup.html', {})

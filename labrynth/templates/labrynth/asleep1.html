@@ -27,33 +27,30 @@
         font-size: 100px;
         margin-left: 20px;
     }
+    button {
+        margin-left: 20px;
+    }
+    .Shaquila {
+        color: rgb(65, 29, 104)
+    }
+    .You {
+        color:rgb(147, 0, 0)
+    }
+    .zzzYou {
+        -webkit-text-stroke: 0.4px rgb(255, 81, 0);
+        color:rgb(109, 0, 0)
+    }
+    .Trance {
+        -webkit-text-stroke: 0.4px rgb(0, 94, 255);
+        color:rgb(148, 248, 255)
+    }
+
 </style>
 {% endblock %}
 
 {% block content %}
-<h1>The Labrynth</h1>
-    <p>AH!!! You're startled from the sound and jump. Who just said that?</p>
-    <form method="POST">
-        {% csrf_token %}
-        <button type="submit">I did</button>
-    </form>
-    <p>Err... You say hello? Not you... I mean me- I mean... Err... Shaquila says hello...</p>
-    <br>
-    <p>Hey. Do you always say hi to voices in your head?</p>
-    <br>
-    <p>...</p>
-    <p>This is the first time Shaquila has heard a voice in her head. She wishes for you to kindly leave.</p>
-    <br>
-    <p>How do you expect me to leave? I don't even know how I got in your head.</p>
-    <br>
-    <p>The voice's unpredictability reminds Shaquila of her stepmother. She can hear her heartbeat grow louder.</p>
-    <p>She asks the voice to leave once more and takes a swing at the air.</p>
-    <br>
-    <p>I already told you I don't know how to leave.</p>
-    <br>
-    <p>"Liar!" Shaquila lashes her arms out in every direction around her. She feels a sharp pain on her right-hand ring finger.</p>
-    <p>She gets pricked by a thorn from a anesthesiac vine...</p>
-    <br>
-    <a >
+<h1><span style='color: white;'>The Labrynth</span></h1>
+    <p><span class='zzzYou'>You wake up.</span></p>
+    <p><span class='Trance'>You wake up.</span></p>
 
 {% endblock %}

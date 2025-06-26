@@ -5,7 +5,7 @@
          <title>Keep Walking...</title>
     <style>
     body {
-        background-color: rgb(208, 230, 208)
+        background-color: rgb(231, 255, 231)
     }
     h1 {
     margin-top: 30px;
@@ -24,36 +24,47 @@
         margin-left: 0px
     }
     a {
-        font-size: 100px;
+        font-size: 20px;
         margin-left: 20px;
     }
+    button {
+        margin-left: 20px;
+    }
+    .Shaquila {
+        color: rgb(65, 29, 104)
+    }
+    .You {
+        color:rgb(147, 0, 0)
+    }
+
 </style>
 {% endblock %}
 
 {% block content %}
 <h1>The Labrynth</h1>
-    <p>AH!!! You're startled from the sound and jump. Who just said that?</p>
+    <p><span class='Shaquila'>AH!!! You're startled from the sound and jump. Who just said that?</span></p>
     <form method="POST">
         {% csrf_token %}
         <button type="submit">I did</button>
     </form>
-    <p>Err... You say hello? Not you... I mean me- I mean... Err... Shaquila says hello...</p>
+    {% if firstbuttonclicked %}
+    <p><span class='Shaquila'>Err... You say hello? Not you... I mean me- I mean... Err... Shaquila says hello...</span></p>
     <br>
-    <p>Hey. Do you always say hi to voices in your head?</p>
+    <p><span class='You'>Hey. Do you always say hi to voices in your head?</span></p>
     <br>
     <p>...</p>
-    <p>This is the first time Shaquila has heard a voice in her head. She wishes for you to kindly leave.</p>
+    <p><span class='Shaquila'>This is the first time Shaquila has heard a voice in her head. She wishes for you to kindly leave.</span></p>
     <br>
-    <p>How do you expect me to leave? I don't even know how I got in your head.</p>
+    <p><span class='You'>How do you expect me to leave? I don't even know how I got in your head.</span></p>
     <br>
-    <p>The voice's unpredictability reminds Shaquila of her stepmother. She can hear her heartbeat grow louder.</p>
-    <p>She asks the voice to leave once more and takes a swing at the air.</p>
+    <p><span class='Shaquila'>The voice's unpredictability reminds Shaquila of her stepmother. She can hear her heartbeat grow louder.</span></p>
+    <p><span class='Shaquila'>She asks the voice to leave once more and takes a swing at the air.</span></p>
     <br>
-    <p>I already told you I don't know how to leave.</p>
+    <p><span class='You'>I already told you I don't know how to leave.</span></p>
     <br>
-    <p>"Liar!" Shaquila lashes her arms out in every direction around her. She feels a sharp pain on her right-hand ring finger.</p>
-    <p>She gets pricked by a thorn from an anesthetic plant she is too sleepy to recognize...</p>
+    <p><span class='Shaquila'>"Liar!" Shaquila lashes her arms out in every direction around her. She feels a sharp pain on her right-hand ring finger.</span></p>
+    <p><span class='Shaquila'>She gets pricked by a thorn from an anesthetic plant she is too sleepy to recognize...</span></p>
     <br>
     <a href="/asleep1">She's asleep...</a>
-
+    {% endif %}
 {% endblock %}
