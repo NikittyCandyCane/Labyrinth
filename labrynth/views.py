@@ -7,7 +7,11 @@ def home(request):
     return render(request, 'labrynth/home.html')
 
 def keep_walking(request):
-    return render(request, 'labrynth/keep_walking.html')
+    if request.method == 'POST':
+            firstbuttonclicked = True
+            return render(request, 'labrynth/keep_walking.html', context = {'firstbuttonclicked' : firstbuttonclicked})
+        
+    return render(request, 'labrynth/keep_walking.html', context = {'firstbuttonclicked' : False})
 
 # login function for later if I figure out how forms work...
 #def signup(request):
@@ -31,4 +35,7 @@ def keep_walking(request):
 # As soon as she falls asleep, you can control her body. Your mind also becomes clearer as she sleeps.
 # You remember that your goal was to manipulate her into not stopping the drought.
 # You are a fungus that has only recently begun thriving because of the drought.
-""" you found your way into the brain of the girl and """
+""" you found your way into Shaquila's brain and you need to find a way to save your populace from dying out.
+To help with confusion, Shaquila's voice will be a certain colour, and there will be a real narrator voice from
+your true perspective.
+"""
