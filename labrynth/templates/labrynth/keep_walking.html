@@ -5,7 +5,7 @@
          <title>Keep Walking...</title>
     <style>
     body {
-        background-color: rgb(231, 255, 231)
+        background-color: rgb(255, 231, 238)
     }
     h1 {
     margin-top: 30px;
@@ -34,6 +34,7 @@
         color: rgb(65, 29, 104)
     }
     .You {
+        -webkit-text-stroke: 0.4px rgb(60, 0, 0);
         color:rgb(147, 0, 0)
     }
 
@@ -41,13 +42,17 @@
 {% endblock %}
 
 {% block content %}
-<h1>The Labrynth</h1>
+<div class="container-fluid mt-0">
+    <div style="background-color: rgb(255, 149, 191); padding: 2rem; border-radius: 0rem; min-height: 100px; margin: 0;">
+<h1>The Labrynth</h1></div></div>
+        <br>
     <p><span class='Shaquila'>AH!!! You're startled from the sound and jump. Who just said that?</span></p>
     <form method="POST">
         {% csrf_token %}
         <button type="submit">I did</button>
     </form>
     {% if firstbuttonclicked %}
+    <br>
     <p><span class='Shaquila'>Err... You say hello? Not you... I mean me- I mean... Err... Shaquila says hello...</span></p>
     <br>
     <p><span class='You'>Hey. Do you always say hi to voices in your head?</span></p>

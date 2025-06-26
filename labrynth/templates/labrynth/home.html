@@ -2,10 +2,11 @@
 
     {% block head %}
     {{ block.super }}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
          <title>Home</title>
     <style>
     body {
-        background-color: rgb(208, 230, 208)
+        background-color: rgb(255, 255, 255)
     }
     h1 {
     margin-top: 30px;
@@ -27,20 +28,36 @@
         font-size: 20px;
         margin-left: 20px;
     }
+    .Shaquila {
+        color: rgb(65, 29, 104)
+    }
+    .rectangle {
+        width: 1200px;
+        height: 100px;
+        background-color: rgb(203, 203, 203);
+        border: 2px solid rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 </style>
 {% endblock %}
 
 {% block content %}
-<h1>The Labrynth</h1>
-        <p>Every rock has a name, and every tree looks the same.</p>
-        <p>The cobbled path of 6 birch trees that decide to go bald every winter, </p>
-        <p>a few vines of english ivy (an invasive species, but these ones doesn't seem to be doing so well at their job),</p>
-        <p>and about a billion Western hemlock trees is no newer to you than life itself.</p>
+<div class="container-fluid mt-0">
+    <div style="background-color: rgb(208, 208, 208); padding: 2rem; border-radius: 0rem; min-height: 100px; margin: 0;">
+<h1>The Labrynth</h1></div></div>
         <br>
-        <p>Your stepmother has sent you berry hunting... again.</p>
-        <p>You really wouldn't mind being outside if the outside was as beautiful as it was a year ago.</p>
-        <p>Mother Nature's cradles has long since been replaced by a drought, and with her absence the flora has suffered. </p>
-        <p>Maybe that Theta Grunberg was right about climate change and what not...</p>
+        <p><span class='Shaquila'>Every rock has a name, and every tree looks the same.</p></span>
+        <p><span class='Shaquila'>The cobbled path of 6 birch trees that decide to go bald every winter, </p></span>
+        <p><span class='Shaquila'>a few vines of english ivy (an invasive species, but these ones doesn't seem to be doing so well at their job),</p></span>
+        <p><span class='Shaquila'>and about a billion Western hemlock trees is no newer to you than life itself.</p></span>
+        <br>
+        <p><span class='Shaquila'>Your stepmother has sent you berry hunting... again.</p></span>
+        <p><span class='Shaquila'>You really wouldn't mind being outside if the outside was as beautiful as it was a year ago.</p></span>
+        <p><span class='Shaquila'>Mother Nature's cradles has long since been replaced by a drought, and with her absence the flora has suffered. </p></span>
+        <p><span class='Shaquila'>Maybe that Theta Grunberg was right about climate change and what not...</p></span>
         <a href="/keep_walking">Keep walking...</a>
 
     

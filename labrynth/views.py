@@ -16,6 +16,9 @@ def keep_walking(request):
 def asleep1(request):
      return render(request, 'labrynth/asleep1.html', context = {})
 
+def labrynth_hole(request):
+     return render(request, 'labrynth/labrynth_hole.html', context = {})
+
 # login function for later if I figure out how forms work...
 #def signup(request):
 #    return render(request, 'labrynth/signup.html', {})
