@@ -10,8 +10,25 @@ def keep_walking(request):
     return render(request, 'labrynth/keep_walking.html')
 
 # login function for later if I figure out how forms work...
-def signup(request):
-    return render(request, 'labrynth/signup.html', {})
+#def signup(request):
+#    return render(request, 'labrynth/signup.html', {})
 
-def login(request)
-    return render(request, 'labrynth/login.html', {})
+#def login(request)
+#    return render(request, 'labrynth/login.html', {})
+
+
+# I'll add in playing as Shaquila later if I have time but I doubt I will ToT
+# Shaquila vs The voice in her head
+# Based on your first choice, you can either be Shaquilla, or a voice in her head (This will be stored in a variable)
+# I want both ways to have the same plotline and meeting the same characters and the same options, but I want the styles to be different
+#  Shaquila-choice  style: Light backgrounds, an extra good ending
+#  Voice-Choice Style: Darker backgrounds, images of things you couldn't see as Shaquila, an extra bad ending
+
+
+# Plotline
+# Shaquila is a girl who loves nature, has an evil stepmother (uses her for chores) and wants a drought in her town to go away
+# While bickering with you, she pricks her finger on a thorn that has anesthetics in it, and it promptly puts her to sleep
+# As soon as she falls asleep, you can control her body. Your mind also becomes clearer as she sleeps.
+# You remember that your goal was to manipulate her into not stopping the drought.
+# You are a fungus that has only recently begun thriving because of the drought.
+""" you found your way into the brain of the girl and """

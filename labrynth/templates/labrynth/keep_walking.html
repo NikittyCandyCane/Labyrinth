@@ -2,7 +2,7 @@
 
     {% block head %}
     {{ block.super }}
-         <title>Home</title>
+         <title>Keep Walking...</title>
     <style>
     body {
         background-color: rgb(208, 230, 208)
@@ -32,15 +32,15 @@
 
 {% block content %}
 <h1>The Labrynth</h1>
-        <p>Every rock has a name, and every tree looks the same.</p>
-        <p>The cobbled path of 6 birch trees that decide to go bald every winter, </p>
-        <p>a few vines of english ivy (an invasive species, but these ones doesn't seem to be doing so well at their job),</p>
-        <p>and about a billion Western hemlock trees is no newer to you than life itself.</p>
-        <br>
-        <p>Your stepmother has sent you berry hunting... again.</p>
-        <p>You really wouldn't mind being outside if the outside was as beautiful as it was a year ago.</p>
-        <p>Mother Nature's cradles has long since been replaced by a drought, and with her absence the flora has suffered. </p>
-        <p>Maybe that Theta Grunberg was right about climate change and what not...</p>
+    <p>AH!!! You're startled from the sound and jump. Who just said that?</p>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">I did</button>
+    </form>
+    <p>Err... You say hello? Not you... I mean me- I mean... Err... Shaquila says hello...</p>
+    <p>Hey. Do you always say hi to voices in your head?</p>
+    <p></p>
+
 
         
 {% endblock %}
