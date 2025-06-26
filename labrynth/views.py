@@ -4,4 +4,4 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    return render(request, 'labrynth/base.html')
+    return render(request, 'labrynth/home.html')

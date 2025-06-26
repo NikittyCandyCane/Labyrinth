@@ -1,12 +1,14 @@
+{% load static %}
+
 <html>
     <head>
+        <link rel="icon" type="image/png" href="{% static 'images/favicon.PNG' %}">
+        {% block head %}
+        {% endblock %}
     </head>
     <body>
-        <h1>The Labrynth</h1>
-        <p>Every rock has a name, and every tree looks the same.</p>
-        <p>The cobbled path of 6 birch trees that decide to go bald every winter, </p>
-        <p>a few vines of english ivy (an invasive species, but these ones doesn't seem to be doing so well),</p>
-        <p>and about a billion Western hemlock trees is no newer to you than existence itself.</p>
-        <p></p>
+        {% block content %}
+        {% endblock %}
     </body>
+
 </html>
