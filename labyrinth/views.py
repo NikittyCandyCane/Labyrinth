@@ -33,14 +33,21 @@ def dont_brace_for_landing(request):
 
 def follow_parrot(request):
      choice = 'follow'
-     return render(request, 'labyrinth/follow_parrot.html', context = {'trust' : trust, 'choice' : choice})
+     action = 'n/a'
+     if request.method == 'POST':
+          action = request.POST.get('action')
+          return render(request, 'labyrinth/follow_parrot.html', context = {'trust' : trust, 'choice' : choice, 'action' : action, 'debug' : 'YES, TEMPLATE IS CONNECTED'})
+     return render(request, 'labyrinth/follow_parrot.html', context = {'trust' : trust, 'choice' : choice, 'action' : action, 'debug' : 'YES, TEMPLATE IS CONNECTED'})
 
 def sketchy_parrot(request):
      choice = 'sketchy'
+     action = 'n/a'
+     if request.method == 'POST':
+          action = request.POST.get('action')
      if trust == 0:
-          return render(request, 'labyrinth/follow_parrot.html', context = {'trust' : trust, 'choice' : choice})
+          return render(request, 'labyrinth/skethcy_parrot.html', context = {'trust' : trust, 'choice' : choice, 'action' : action})
      else:
-          return render(request, 'labyrinth/sketchy_parrot.html', context = {})
+          return render(request, 'labyrinth/skethcy_parrot.html', context = {'trust' : trust, 'choice' : choice, 'action' : action})
 
 # login function for later if I figure out how forms work...
 #def signup(request):

@@ -67,8 +67,24 @@
             <source src="{% static '/sounds/brace.mp3' %}" type="audio/mpeg">
             Your browser does not support audio.
         </audio>    
+        <p>{{ debug }}</p>
 <br>
-    <p><span class='Narrator'><i><b>Trust + 1</b></i></span></p>
+    {% if choice == 'sketchy' %}
+        <p><span class='Narrator'><i><b>You don't have enough TRUST to pick that choice.</b></i></span></p>
+        <br>
+        <p><span class='Shaquila'>Shaquila thinks that the voice is more sketchy than any talking animal could ever be.</span></p>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" name='action' value="insist">Insist</button>
+        <button type="submit" name="action" value="brush it off">Brush it off</button>
+    </form>
+    {% if action == 'insist' %}
+        <p><span class='You'>You insist.</span></p>
+    {% elif action == 'brush it off' %}
+        <p><span class='You'>You brush it off.</span></p>
+    {% endif %}
+    {% endif %}
+
     
     <br>
     <a href="/follow_parrot" class="You">Follow that parrot Shaquila!</a>
