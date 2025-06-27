@@ -75,8 +75,8 @@
         <p><span class='Shaquila'>Shaquila thinks that the voice is more sketchy than any talking animal could ever be.</span></p>
     <form method="POST">
         {% csrf_token %}
-        <button type="submit" name='action' value="insist">Insist</button>
-        <button type="submit" name="action" value="brush it off">Brush it off</button>
+        <button type="submit" name='tree_guess' value="insist">Insist</button>
+        <button type="submit" name="submit_tree_guess" value="brush it off">Brush it off</button>
     </form>
     {% if action == 'insist' %}
         <p><span class='You'>You insist.</span></p>

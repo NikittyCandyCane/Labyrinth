@@ -34,20 +34,25 @@ def dont_brace_for_landing(request):
 def follow_parrot(request):
      choice = 'follow'
      action = 'n/a'
-     if request.method == 'POST':
-          action = request.POST.get('action')
-          return render(request, 'labyrinth/follow_parrot.html', context = {'trust' : trust, 'choice' : choice, 'action' : action, 'debug' : 'YES, TEMPLATE IS CONNECTED'})
-     return render(request, 'labyrinth/follow_parrot.html', context = {'trust' : trust, 'choice' : choice, 'action' : action, 'debug' : 'YES, TEMPLATE IS CONNECTED'})
+     return render(request, 'labyrinth/follow_parrot.html', context = {'trust' : trust, 'choice' : choice, 'action' : action})
 
 def sketchy_parrot(request):
      choice = 'sketchy'
      action = 'n/a'
+     tree_guess = 'n/a'
      if request.method == 'POST':
-          action = request.POST.get('action')
-     if trust == 0:
-          return render(request, 'labyrinth/skethcy_parrot.html', context = {'trust' : trust, 'choice' : choice, 'action' : action})
-     else:
-          return render(request, 'labyrinth/skethcy_parrot.html', context = {'trust' : trust, 'choice' : choice, 'action' : action})
+          if 'action' in request.POST:
+               action = request.POST.get('action')
+          elif 'tree_guess' in request.POST:
+               action = request.POST.get('action')
+               tree_guess = request.POST.get('tree_guess').lower()
+               if 'western hemlock' in tree_guess:
+                    tree_guess = 'correct'
+                    trust = 1
+               else:
+                    tree_guess = 'incorrect'
+                    trust = -1
+     return render(request, 'labyrinth/sketchy_parrot.html', context = {'trust' : trust, 'choice' : choice, 'action' : action, 'tree_guess' : tree_guess})
 
 # login function for later if I figure out how forms work...
 #def signup(request):
