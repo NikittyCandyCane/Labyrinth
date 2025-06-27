@@ -1,0 +1,76 @@
+{% extends 'labyrinth/base.html' %}
+{% load static %}
+
+    {% block head %}
+    {{ block.super }}
+         <title>Follow!</title>
+    <style>
+    body {
+        background-color: rgb(214, 185, 255)
+    }
+    h1 {
+    margin-top: 30px;
+    }
+    h1 {
+        margin-left: 30px;
+    }
+    p {
+        margin-left: 50px;
+        margin-right: 40px;
+        font-size: 20px;
+    }
+    label {
+        margin-left: 20px;
+    }
+    img {
+        margin-left: 0px
+    }
+    a {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    button {
+        margin-left: 20px;
+    }
+    .Shaquila {
+        -webkit-text-stroke: 0.4px rgb(255, 0, 208);
+        color: rgb(65, 29, 104)
+    }
+    .You {
+        -webkit-text-stroke: 0.4px rgb(255, 0, 0);
+        color:rgb(147, 0, 0)
+    }
+    .zzzYou {
+        -webkit-text-stroke: 0.4px rgb(255, 81, 0);
+        color:rgb(109, 0, 0)
+    }
+    .Trance {
+        -webkit-text-stroke: 0.4px rgb(0, 94, 255);
+        color:rgb(148, 248, 255)
+    }
+    .Narrator {
+        color:rgb(0, 0, 0)
+    }
+    .parrot {
+        -webkit-text-stroke: 0.4px rgb(0, 255, 38);
+        color: rgb(7, 100, 46);
+    }
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-0">
+    <div style="background-color: rgb(140, 52, 152); padding: 2rem; border-radius: 0rem; min-height: 100px; margin: 0;">
+<h1><span style='color: white;'>The Labyrinth</span></h1></div></div>
+<audio autoplay loop>
+            <source src="{% static '/sounds/brace.mp3' %}" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>    
+<br>
+    <p><span class='Narrator'><i><b>Trust + 1</b></i></span></p>
+    
+    <br>
+    <a href="/follow_parrot" class="You">Follow that parrot Shaquila!</a>
+    <a href="/sketchy_parrot" class="You">Woah woah.... doesn't this seem a little bit sketchy to you?</a>
+{% endblock %}

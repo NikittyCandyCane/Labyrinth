@@ -1,4 +1,5 @@
 {% extends 'labyrinth/base.html' %}
+{% load static %}
 
     {% block head %}
     {{ block.super }}
@@ -55,6 +56,10 @@
 {% block content %}
 <div class="container-fluid mt-0">
     <div style="background-color: rgb(0, 0, 0); padding: 2rem; border-radius: 0rem; min-height: 100px; margin: 0;">
+        <audio autoplay loop>
+            <source src="{% static '/sounds/asleep.mp3' %}" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
 <h1><span style='color: white;'>The Labrynth</span></h1></div></div>
     <br>
     <p><span class='Narrator'>You feel a stabbing pain in your head. It's as if all your senses are awakening.</span></p>
@@ -68,7 +73,7 @@
     <p><span class='zzzYou'>Hello??? Who said that...!</span></p>
     <p><span class='Trance'>Sorry... it's a little bit difficult reaching you. I'm in a different part of the host's brain, so I'm trying my best to communicate through a chain of electrical impulses. The part of the host's brain you're in is more unsafe than mine. It may have led to some of your memory loss.</span></p>
     <p><span class='zzzYou'>Memory loss...? What do you mean? And how do you know who I am?</span></p>
-    <p><span class='Trance'>So you did forget... no worries, I'll fill you in. My name is Trance. We belong to a species of rare fungi called Amerfidelia. The drought you're seeing affect all the plants around you is making our insentient competition for nature's resources weaker. It has been saving our familes lives. We knew the host was plant-obsessed, and often waterred our competition, as well as had intentions of stopping the drought. Then one day, when she was picking berries near the English ivy leaves we grew on, her elbows nudged the leaves and we flew up into the air. After landing on her clothes, we decided to invade her brain, and made a pact we would stop her. Make sure not to tell the host any of this, as she, as well as the rest of mankind, believes that all fungi are not sentient. If they find out about this, they could do more damage to our species than they've already done...</span></p>
+    <p><span class='Trance'>So you did forget... no worries, I'll fill you in. My name is Trance. We belong to a species of rare fungi called Amerfidelia. The drought you're seeing affect all the plants around you is making our insentient competition for nature's resources weaker. The drought has been saving our familes lives. We knew the host was plant-obsessed, and often waterred our competition, as well as had intentions of stopping the drought. Then one day, when she was picking berries near the English ivy leaves we grew on, her elbows nudged the leaves and we flew up into the air. After landing on her clothes, we decided to invade her brain, and made a pact we would stop her. Make sure not to tell the host any of this, as she, as well as the rest of mankind, believes that all fungi are not sentient. If they find out about this, they could do more damage to our species than they've already done...</span></p>
     <p><span class='zzzYou'>Geez... that explains a lot. I hope my family is doing okay... How do we stop the host???</span></p>
     <p><span class='Trance'>I'm in the brain's memory area, and I can tell you anything about the host and the world. You're in the main control area, and can interact with any of her thoughts. When she sleeps, you take over her body. You can neither communicate with me nor <i>see</i> or <i>move</i> when she's awake however.</span></p>
     <br>

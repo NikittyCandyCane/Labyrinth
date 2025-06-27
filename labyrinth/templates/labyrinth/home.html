@@ -1,4 +1,5 @@
 {% extends 'labyrinth/base.html' %}
+{% load static %}
 
     {% block head %}
     {{ block.super }}
@@ -52,6 +53,13 @@
 {% block content %}
 <div class="container-fluid mt-0">
     <div style="background-color: rgb(208, 208, 208); padding: 2rem; border-radius: 0rem; min-height: 100px; margin: 0;">
+        <audio autopla loop>
+            <source src="{% static '/sounds/birds.mp3' %}" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+        <audio autoplay loop>
+            <source src="{% static '/sounds/home.mp3' %}" type="audio/mpeg">
+        </audio>
 <h1>The Labrynth</h1></div></div>
         <br>
         <p><span class='Shaquila'>Every rock has a name, and every tree looks the same.</p></span>

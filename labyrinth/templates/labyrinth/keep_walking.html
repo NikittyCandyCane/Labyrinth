@@ -1,5 +1,5 @@
 {% extends 'labyrinth/base.html' %}
-
+{% load static %}
     {% block head %}
     {{ block.super }}
          <title>Keep Walking...</title>
@@ -45,7 +45,8 @@
 {% block content %}
 <div class="container-fluid mt-0">
     <div style="background-color: rgb(255, 149, 191); padding: 2rem; border-radius: 0rem; min-height: 100px; margin: 0;">
-<h1>The Labrynth</h1></div></div>
+        
+        <h1>The Labrynth</h1></div></div>
         <br>
     <p><span class='Shaquila'>AH!!! You're startled from the sound and jump. Who just said that?</span></p>
     <form method="POST">
@@ -53,6 +54,10 @@
         <button type="submit">I did</button>
     </form>
     {% if firstbuttonclicked %}
+    <audio autoplay loop>
+            <source src="{% static '/sounds/silly.mp3' %}" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
     <br>
     <p><span class='Shaquila'>Err... You say hello? Not you... I mean me- I mean... Err... Shaquila says hello...</span></p>
     <br>
@@ -72,5 +77,10 @@
     <p><span class='Shaquila'>She gets pricked by a thorn from an anesthetic plant she is too sleepy to recognize...</span></p>
     <br>
     <a href="/asleep1" class="You">She's asleep...</a>
+    {% else %}
+    <audio autoplay>
+            <source src="{% static '/sounds/nervous.mp3' %}" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
     {% endif %}
 {% endblock %}
