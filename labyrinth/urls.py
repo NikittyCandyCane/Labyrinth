@@ -10,4 +10,7 @@ urlpatterns = [
     path('dont_brace_for_landing/', views.dont_brace_for_landing),
     path('follow_parrot/', views.follow_parrot),
     path('sketchy_parrot/', views.sketchy_parrot),
+    path('say_nothing/', views.say_nothing),
+    path('say_diseased/', views.say_diseased),
+    path('befriend/', views.befriend),
 ]

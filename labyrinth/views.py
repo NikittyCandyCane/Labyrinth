@@ -37,6 +37,7 @@ def follow_parrot(request):
      return render(request, 'labyrinth/follow_parrot.html', context = {'trust' : trust, 'choice' : choice, 'action' : action})
 
 def sketchy_parrot(request):
+     global trust
      choice = 'sketchy'
      action = 'n/a'
      tree_guess = 'n/a'
@@ -53,6 +54,17 @@ def sketchy_parrot(request):
                     tree_guess = 'incorrect'
                     trust = -1
      return render(request, 'labyrinth/sketchy_parrot.html', context = {'trust' : trust, 'choice' : choice, 'action' : action, 'tree_guess' : tree_guess})
+
+def say_diseased(request):
+     global trust 
+     trust += 1 # might change later
+     return render(request, 'labyrinth/say_diseased.html', context = {})
+
+def say_nothing(request):
+     return render(request, 'labyrinth/say_nothing.html', context = {})
+
+def befriend(request):
+     return render(request, 'labyrinth/befriend.html', context = {})
 
 # login function for later if I figure out how forms work...
 #def signup(request):

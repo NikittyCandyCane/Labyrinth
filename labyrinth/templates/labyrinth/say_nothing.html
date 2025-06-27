@@ -1,0 +1,90 @@
+{% extends 'labyrinth/base.html' %}
+{% load static %}
+
+    {% block head %}
+    {{ block.super }}
+         <title>Follow!</title>
+    <style>
+    body {
+        background-color: rgb(0, 34, 67)
+    }
+    h1 {
+    margin-top: 30px;
+    }
+    h1 {
+        margin-left: 30px;
+    }
+    p {
+        margin-left: 50px;
+        margin-right: 40px;
+        font-size: 20px;
+    }
+    label {
+        margin-left: 20px;
+    }
+    img {
+        margin-left: 0px
+    }
+    a {
+        font-size: 20px;
+        margin-left: 50px;
+    }
+    button {
+        margin-left: 20px;
+    }
+    .Shaquila {
+        -webkit-text-stroke: 0.4px rgb(255, 0, 208);
+        color: rgb(65, 29, 104)
+    }
+    .You {
+        -webkit-text-stroke: 0.4px rgb(255, 0, 0);
+        color:rgb(147, 0, 0)
+    }
+    .zzzYou {
+        -webkit-text-stroke: 0.4px rgb(255, 81, 0);
+        color:rgb(109, 0, 0)
+    }
+    .Trance {
+        -webkit-text-stroke: 0.4px rgb(0, 94, 255);
+        color:rgb(148, 248, 255)
+    }
+    .Narrator {
+        color:rgb(255, 255, 255)
+    }
+    .parrot {
+        -webkit-text-stroke: 0.4px rgb(0, 255, 38);
+        color: rgb(7, 100, 46);
+    }
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-0">
+    <div style="background-color: rgb(0, 0, 0); padding: 2rem; border-radius: 0rem; min-height: 100px; margin: 0;">
+<h1><span style='color: white;'>The Labyrinth</span></h1></div></div>
+<audio autoplay loop>
+            <source src="{% static '/sounds/say_nothing.mp3' %}" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>    
+    <br>
+    <p><span class='Shaquila'>Even though every instinct tells you not to, you cup your hands and drink from the fountain. The water is strangely cold, almost metallic, but you swallow it anyway. Within seconds, the world tilts. Your knees buckle as dizziness washes over you, thick and disorienting. You try to steady yourself, but the stone edge of the fountain slips from your grasp. Just before everything goes black, you catch one last image: the green parrot perched on the fountain's rim, beak curled in a wicked grin.</span></p>
+    <p><span class='Narrator'>A static noise grows louder and clears up a bit, until you can just barely figure out what's being said.</span></p>
+    <p><span class='Trance'>Hello??? This is TRANCE! Can you tell what I'm saying???</span></p>
+    <p><span class='You'>Yes, Trance! Why am I not gaining control of Shaquila's body? She fainted, didn't she?</span></p>
+    <p><span class='Trance'>What??? What did you do? The walls are closing in! Her brain tissues are inflammed! If her brain is unresponsive to her body, you can't control it either!</span></p>
+    <p><span class='You'>What?! Trance! What do I do??? Trance? Trance!</span></p>
+    <p><span class='Trance'>It's getting di- icult to send electric sig- als. Fi- Find me in the -... !</span></p>
+    <p><span class='You'>TRANCE! AH GOD PLEASE TRANCE TRANCE GOD .</span></p>
+    <p><span class='Narrator'>Brain tissues close in from all around you. There's an exit to your right through the ear. What will you do?</span></p>
+    <br>
+    <a href="/Trance_search" class="You">FIND TRANCE .</a>
+    <a href="/Trance_leave" class="You">ESCAPE BEFORE YOU DIE .</a>
+    <a href="/Trance_leave" class="You">ESCAPE BEFORE YOU DIE .</a>
+    <a href="/Trance_leave" class="You">ESCAPE BEFORE YOU DIE .</a>
+    <a href="/Trance_leave" class="You">ESCAPE BEFORE YOU DIE .</a>
+    <a href="/Trance_leave" class="You">ESCAPE BEFORE YOU DIE .</a>
+    <a href="/Trance_leave" class="You">ESCAPE BEFORE YOU DIE .</a>
+    <a href="/Trance_leave" class="You">ESCAPE BEFORE YOU DIE .</a>
+    <a href="/Trance_leave" class="You">ESCAPE BEFORE YOU DIE .</a>
+{% endblock %}

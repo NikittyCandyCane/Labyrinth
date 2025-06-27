@@ -6,7 +6,7 @@
          <title>Follow!</title>
     <style>
     body {
-        background-color: rgb(214, 185, 255)
+        background-color: rgb(185, 220, 255)
     }
     h1 {
     margin-top: 30px;
@@ -61,32 +61,19 @@
 
 {% block content %}
 <div class="container-fluid mt-0">
-    <div style="background-color: rgb(140, 52, 152); padding: 2rem; border-radius: 0rem; min-height: 100px; margin: 0;">
+    <div style="background-color: rgb(59, 52, 152); padding: 2rem; border-radius: 0rem; min-height: 100px; margin: 0;">
 <h1><span style='color: white;'>The Labyrinth</span></h1></div></div>
 <audio autoplay loop>
-            <source src="{% static '/sounds/brace.mp3' %}" type="audio/mpeg">
+            <source src="{% static '/sounds/fountain.mp3' %}" type="audio/mpeg">
             Your browser does not support audio.
         </audio>    
-        <p>{{ debug }}</p>
-<br>
-    {% if choice == 'sketchy' %}
-        <p><span class='Narrator'><i><b>You don't have enough TRUST to pick that choice.</b></i></span></p>
-        <br>
-        <p><span class='Shaquila'>Shaquila thinks that the voice is more sketchy than any talking animal could ever be.</span></p>
-    <form method="POST">
-        {% csrf_token %}
-        <button type="submit" name='tree_guess' value="insist">Insist</button>
-        <button type="submit" name="submit_tree_guess" value="brush it off">Brush it off</button>
-    </form>
-    {% if action == 'insist' %}
-        <p><span class='You'>You insist.</span></p>
-    {% elif action == 'brush it off' %}
-        <p><span class='You'>You brush it off.</span></p>
-    {% endif %}
-    {% endif %}
-
-    
+    <p><span class='parrot'>"Welcome to the fountain, m'lady!"</span></p>
+    <p><span class='Shaquila'>You stare up at the massive fountain that stretches into the sky. Only the second tier must be at least 200 feet from the ground. The basin stretches so far that you can't even see the other side. "You call <i>this</i> a fountain??? This is an <i>ocean</i>!"</span></p>
+    <p><span class='parrot'>It might be a bit big, but it's still a fountain! Every animal, fellow, or thing that lives here drinks from this fountain. Care for a sip?</span></p>
+    <p><span class='Shaquila'>You take a peek into the water. The depth is level across the entire fountain floor. If you stepped inside of it, it would probably reach up to your hips. You can see many hydrophobic white blobs that stick together floating through the water. They range from the size of dust to your forearm in radius. "I don't know if I trust those white...things."</span></p>
+    <p><span class='parrot'>"Aww, c'mon! Don't be afraid! Those are the vitamins of our land. They provide the drinker with strength and nutrients!"</span></p>
+    <p><span class='Narrator'>You recognize the white blobs to be similar to the species you belong to. They are known as Fusargillia. When ingested by humans and many other animals, their spores cause a form of meningitis, an inflammation of tissue surrounding the brain...</span></p>
     <br>
-    <a href="/follow_parrot" class="You">Follow that parrot Shaquila!</a>
-    <a href="/sketchy_parrot" class="You">Woah woah.... doesn't this seem a little bit sketchy to you?</a>
+    <a href="/say_nothing" class="You">... (Say nothing)</a>
+    <a href="/say_diseased" class="You">Shaquila, stop! It's diseased!</a>
 {% endblock %}

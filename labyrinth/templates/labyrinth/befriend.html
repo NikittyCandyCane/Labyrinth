@@ -1,0 +1,85 @@
+{% extends 'labyrinth/base.html' %}
+{% load static %}
+
+    {% block head %}
+    {{ block.super }}
+         <title>Follow!</title>
+    <style>
+    body {
+        background-color: rgb(185, 220, 255)
+    }
+    h1 {
+    margin-top: 30px;
+    }
+    h1 {
+        margin-left: 30px;
+    }
+    p {
+        margin-left: 50px;
+        margin-right: 40px;
+        font-size: 20px;
+    }
+    label {
+        margin-left: 20px;
+    }
+    img {
+        margin-left: 0px
+    }
+    a {
+        font-size: 20px;
+        margin-left: 50px;
+    }
+    button {
+        margin-left: 20px;
+    }
+    .Shaquila {
+        -webkit-text-stroke: 0.4px rgb(255, 0, 208);
+        color: rgb(65, 29, 104)
+    }
+    .You {
+        -webkit-text-stroke: 0.4px rgb(255, 0, 0);
+        color:rgb(147, 0, 0)
+    }
+    .zzzYou {
+        -webkit-text-stroke: 0.4px rgb(255, 81, 0);
+        color:rgb(109, 0, 0)
+    }
+    .Trance {
+        -webkit-text-stroke: 0.4px rgb(0, 94, 255);
+        color:rgb(148, 248, 255)
+    }
+    .Narrator {
+        color:rgb(0, 0, 0)
+    }
+    .parrot {
+        -webkit-text-stroke: 0.4px rgb(0, 255, 38);
+        color: rgb(7, 100, 46);
+    }
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-0">
+    <div style="background-color: rgb(59, 52, 152); padding: 2rem; border-radius: 0rem; min-height: 100px; margin: 0;">
+<h1><span style='color: white;'>The Labyrinth</span></h1></div></div>
+<audio autoplay loop>
+            <source src="{% static '/sounds/befriend.mp3' %}" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>    
+    <p><span class='Shaquila'>In the distance you see a pipe with water gushing out. Large painted text on it tells you that it connects to Agora Lake, the central lake that supplied all the flora with water near your cottage.</span></p>
+    <p><span class='Shaquila'>You rush over to it, and find a hatch. You try pulling it, but it's rusted shut.</span></p>
+    <p><span class='You'>I believe in you Shaquila!</span></p>
+    <p><span class='Shaquila'>The hatch was rusted solid, its hinges groaning in protest. Sweat beads on your forehead as you throw your weight into it, muscles burning with the effort.</span></p>
+    <p><span class='You'>Come on! You've got this!</span></p>
+    <p><span class='Shaquila'>Gritting your teeth, you gave one final, desperate shove. With a shriek of metal, the hatch jerked free, swinging open in a burst of stale air and triumph.</span></p>
+    <p><span class='You'>You did it!</span></p>
+    <p><span class='Shaquila'>You step inside, the air damp and echoing with the sound of trickling water. The space inside of the pipe looked like a sewer—arched ceilings and slick stone tiles. A steady stream of water gushed through a channel carved into the floor. At the far end, a single rusted lever stood upright. You hurry over, heart pounding, and flick it down. The water stopped instantly, the silence that followed almost sacred. You laugh, breathless, as the water stops gushing out. You did it! You stopped the drought!</span></p>
+    <br>
+    <p><span class='Narrator'><i>. . . Weeks later . . .</i></span></p>
+    <br>
+    <p><span class='Narrator'>Back at Shaquila's cottage, she sat by the window, tea in hand, watching the sun glint off full rain barrels and green hills. The land was alive again, and for the first time in a long while, so was she. And you, my dear fungus? You couldn't stop thinking about what she first said when she arrived back home after stopping the drought. <i>"Look, voice! The English ivies are finally starting to grow! The odd fungi that grew on them before are all dead now!"</i>
+    <p><span class='Narrator'><b>ENDING 1/4 : Best Friends Forever</b></span></p>
+    <br>
+    <a href="/" class="Narrator">Restart?</a>
+{% endblock %}
