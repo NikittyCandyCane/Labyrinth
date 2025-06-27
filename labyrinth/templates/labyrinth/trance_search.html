@@ -1,0 +1,112 @@
+{% extends 'labyrinth/base.html' %}
+{% load static %}
+
+    {% block head %}
+    {{ block.super }}
+         <title>TRANCE!!!</title>
+    <style>
+    body {
+        background-color: rgb(0, 12, 39)
+    }
+    h1 {
+    margin-top: 30px;
+    }
+    h1 {
+        margin-left: 30px;
+    }
+    p {
+        margin-left: 50px;
+        margin-right: 40px;
+        font-size: 20px;
+    }
+    label {
+        margin-left: 20px;
+    }
+    img {
+        margin-left: 0px
+    }
+    a {
+        font-size: 20px;
+        margin-left: 50px;
+    }
+    button {
+        margin-left: 50px;
+    }
+    .Shaquila {
+        -webkit-text-stroke: 0.4px rgb(255, 0, 208);
+        color: rgb(65, 29, 104)
+    }
+    .You {
+        -webkit-text-stroke: 0.4px rgb(255, 0, 0);
+        color:rgb(147, 0, 0)
+    }
+    .zzzYou {
+        -webkit-text-stroke: 0.4px rgb(255, 81, 0);
+        color:rgb(109, 0, 0)
+    }
+    .Trance {
+        -webkit-text-stroke: 0.4px rgb(0, 94, 255);
+        color:rgb(148, 248, 255)
+    }
+    .Narrator {
+        color:rgb(255, 255, 255)
+    }
+    .parrot {
+        -webkit-text-stroke: 0.4px rgb(0, 255, 38);
+        color: rgb(7, 100, 46);
+    }
+    .Chitin {
+        -webkit-text-stroke: 0.4px rgb(255, 156, 156);
+        color: rgb(92, 0, 0);
+    }
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-0">
+    <div style="background-color: rgb(0, 0, 0); padding: 2rem; border-radius: 0rem; min-height: 100px; margin: 0;">
+<h1><span style='color: white;'>The Labyrinth</span></h1></div></div>
+    <br>
+    <p><span class='Narrator'>You surge through the pulsing folds of brain matter, the warmth stifling, the air thick with signals not meant for you. Around you, the walls of swollen tissue begin to press inward.</span></p>
+    <p><span class='You'>TRANCE! Where are you?!?</span></p>
+    <p><span class='Trance'>HEY!!! You came for me!</span></p>
+    <p><span class='Narrator'>Your filaments stretch in every direction, desperate. There! A faint glow. You reach your friend just as the pressure crescendos, wrapping your tendrils around theirs.</span></p>
+    <p><span class='You'>Hold on!</span></p>
+    <p><span class='Narrator'>Together, you lunge toward the nearest fissure—and burst out into a cool, rippling fountain. The water soothes your frayed membranes, but the world outside is vast and unknown. You're shaking.</span></p>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">How do we get home?</button>
+    </form>
+    {% if secondbuttonclicked %}
+    <audio autoplay loop>
+            <source src="{% static '/sounds/true_win.mp3' %}" type="audio/mpeg">
+            Your browser does not support audio.
+    </audio>    
+    <br>
+    <p><span class='You'>How do we get home?</span></p>
+    <p><span class='Narrator'>Trance steadies you with a nod, and smiles at you.</span></p>
+    <p><span class='Trance'>I know a way.</span></p>
+    <br>
+    <p><span class='Narrator'><i>. . . Later . . .</i></span></p>
+    <br>
+    <p><span class='Narrator'>The sun is low when you return to the English ivies. You're damp and buzzing with exhaustion. The colony gathers, humming with questions, and a familiar face bounces forward.</span></p>
+    <p><span class='Trance'>That's Chitin, your little sister.</span></p>
+    <p><span class='Chitin'>Woah! Did you stop the drought? How did you do it?????!?</span></p>
+    <p><span class='You'>It's been a long day. We can all chat in the morning. :)</span></p>
+    <p><span class='Chitin'>Okay!!! I'm going to sleep NOW then!</span></p>
+    <p><span class='Narrator'>Chitin runs off, and the rest of the colony settles. You and Trance sit side by side beneath the glow of bioluminescent moss, your spores brushing gently in the stillness.</span></p>
+    <p><span class='Trance'>We really did it, huh?</span></p>
+    <p><span class='Narrator'>You smile for the first time today.</span></p>
+    <p><span class='Trance'>Yeah, we really did.</span></p>
+    <br>
+    <p><span class='Narrator'><b>ENDING 3/4 : A TRUE WIN .</b></span></p>
+    <br>
+    <a href="/" class="You">Restart?</a>
+    {% else %}
+    <audio autoplay loop>
+            <source src="{% static '/sounds/rescue.mp3' %}" type="audio/mpeg">
+            Your browser does not support audio.
+    </audio>    
+    {% endif %}
+{% endblock %}

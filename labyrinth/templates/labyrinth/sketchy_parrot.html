@@ -3,7 +3,7 @@
 
     {% block head %}
     {{ block.super }}
-         <title>Follow!</title>
+         <title>Sketchy...</title>
     <style>
     body {
         background-color: rgb(214, 185, 255)
@@ -27,7 +27,7 @@
     }
     a {
         font-size: 20px;
-        margin-left: 40px;
+        margin-left: 50px;
     }
     button {
         margin-left: 50px;
@@ -90,7 +90,7 @@
         <button type="submit" name='action' value="insist">Insist</button>
         <button type="submit" name="action" value="brush it off">Brush it off</button>
     </form>
-    {% elif action == 'insist' and trust != -1 or tree_guess == 'correct' and trust != -1 or tree_guess == 'incorrect' and trust != -1%}
+    {% elif action == 'insist' and trust != -1 or tree_guess == 'incorrect' and trust != -1%}
     <form method="POST">
         {% csrf_token %}
         <button type="submit" name='action' value="insist">Insist</button>
@@ -136,11 +136,13 @@
 
 
     {% if trust == 2 or tree_guess == 'correct' %}
-    <p><span class='Shaquila'>"Sorry birdbrain, but I just don't trust you; we've just met," you say, and strut down another path in the maze. </span></p>
-    {% endif %}
-    
-
+    <p><span class='Shaquila'>"Sorry birdbrain, but I just don't trust you; we've just met," you say, and strut down another path in the maze. You step into a quiet clearing, where the air is warm and still, and golden light spills over the moss like a hush. Everything feels peaceful—almost sacred. But at the far end, tucked between two thick roots, there's a hole. It's perfectly round, impossibly dark, and utterly silent. No wind, no hum, no echo—just a stillness that feels too deep, like the world forgot to fill it in. It's about the size of the one you fell through.</span></p>
+    <p><span class='You'>If you fell through a hole around that size getting here, maybe falling through another will get you back?</span></p>
+    <p><span class='Shaquila'>You sigh in disbelief. You trust the voice in your head, but not enough to jump into a hole for it. In the back of your head, there's also a silent prayer that there will be some way in this mysterious land to stop the drought.</span></p>
+    <p><span class='Narrator'>So, what now? You could lie and claim to know that inside of that hole, there's a way to stop the drought. Or have you taken pity for Shaquila?</span></p>
     <br>
-    <a href="/follow_parrot" class="You"></a>
-    <a href="/sketchy_parrot" class="You"></a>
+    <a href="/befriend" class="You">Maybe it would be better to avoid it. Let's see if there's a way in this maze to stop this drought.</a>
+    <br>
+    <a href="/lie" class="You">I know for a fact that in that hole there is a lever that will stop leaking our world's water into this world.</a>
+    {% endif %}
 {% endblock %}

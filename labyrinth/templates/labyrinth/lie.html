@@ -1,0 +1,84 @@
+{% extends 'labyrinth/base.html' %}
+{% load static %}
+    {% block head %}
+    {{ block.super }}
+         <title>Liar</title>
+    <style>
+    body {
+        background-color: rgb(255, 180, 214)
+    }
+    h1 {
+    margin-top: 30px;
+    }
+    h1 {
+        margin-left: 30px;
+    }
+    p {
+        margin-left: 50px;
+        margin-right: 20px;
+        font-size: 20px;
+    }
+    label {
+        margin-left: 20px;
+    }
+    img {
+        margin-left: 0px
+    }
+    a {
+        font-size: 20px;
+        margin-left: 50px;
+    }
+    button {
+        margin-left: 20px;
+    }
+    .Shaquila {
+        -webkit-text-stroke: 0.4px rgb(255, 0, 208);
+        color: rgb(65, 29, 104)
+    }
+    .You {
+        -webkit-text-stroke: 0.4px rgb(255, 0, 0);
+        color:rgb(147, 0, 0)
+    }
+    .zzzYou {
+        -webkit-text-stroke: 0.4px rgb(255, 81, 0);
+        color:rgb(109, 0, 0)
+    }
+    .Trance {
+        -webkit-text-stroke: 0.4px rgb(0, 94, 255);
+        color:rgb(148, 248, 255)
+    }
+    .Narrator {
+        color:rgb(0, 0, 0)
+    }
+    .Mom {
+        -webkit-text-stroke: 0.4px rgb(251, 0, 255);
+        color:rgb(128, 76, 108)
+    }
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-0">
+    <div style="background-color: rgb(152, 52, 129); padding: 2rem; border-radius: 0rem; min-height: 100px; margin: 0;">
+    <audio autoplay loop>
+            <source src="{% static '/sounds/labyrinth_hole.mp3' %}" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+        <h1><span style='color: white;'>The Labyrinth</span></h1></div></div>
+    <br>
+    <p><span class='Shaquila'>You jump into the hole, heart thudding like a drum in your chest. The silence swallows you instantly. No wind, no echo, no voice now, just the cold rush of nothing pulling you down. You are scared. Of the dark, of falling, of being wrong. But the voice said this would work. It told you this was the only way to stop the drought, to save the fields, the rivers, your home. You want to believe it. You need to believe it. So you close your eyes and fall, clutching that last shred of hope like a secret.</span></p>
+    <br>
+    <p><span class='Narrator'><i> . . . </i></span></p>
+    <p><span class='Shaquila'>When you open your eyes again, you are lying on the cobblestone path just outside the cottage. The sky is tinted orange with late afternoon light. Your head aches. Your clothes are dusty and your limbs feel heavy. You push yourself up and stumble toward the porch. Your stepmother is there, and turns around to hang up a piece of laundry. When she sees you, her arms cross, and her mouth tightens with anger.</span></p>
+    <p><span class='You'>Where are the berries?</span></p>
+    <p><span class='Mom'></span></p>
+    <p><span class='You'></span></p>
+    <p><span class='You'></span></p>
+    <p><span class='You'></span></p>
+    <p><span class='You'></span></p>
+    <p><span class='You'></span></p>
+    <p><span class='You'></span></p>
+    <a href="/brace_for_landing" class="You">Brace for landing!</a>
+    <a href="/dont_brace_for_landing" class="You">Don't brace for landing!</a>
+{% endblock %}

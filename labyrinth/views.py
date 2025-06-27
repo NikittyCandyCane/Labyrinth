@@ -66,6 +66,18 @@ def say_nothing(request):
 def befriend(request):
      return render(request, 'labyrinth/befriend.html', context = {})
 
+def trance_leave(request):
+     return render(request, 'labyrinth/trance_leave.html', context = {})
+
+def trance_search(request):
+     if request.method == 'POST':
+            secondbuttonclicked = True
+            return render(request, 'labyrinth/trance_search.html', context = {'secondbuttonclicked' : secondbuttonclicked})      
+     return render(request, 'labyrinth/trance_search.html', context = {'secondbuttonclicked' : False})
+
+def lie(request):
+     return render(request, 'labyrinth/lie.html', context = {})
+
 # login function for later if I figure out how forms work...
 #def signup(request):
 #    return render(request, 'labyrinth/signup.html', {})

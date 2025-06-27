@@ -13,4 +13,7 @@ urlpatterns = [
     path('say_nothing/', views.say_nothing),
     path('say_diseased/', views.say_diseased),
     path('befriend/', views.befriend),
+    path('trance_leave/', views.trance_leave),
+    path('trance_search/', views.trance_search),
+    path('lie/', views.lie)
 ]
