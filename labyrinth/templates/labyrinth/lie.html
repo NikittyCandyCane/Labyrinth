@@ -51,8 +51,8 @@
         color:rgb(0, 0, 0)
     }
     .Mom {
-        -webkit-text-stroke: 0.4px rgb(251, 0, 255);
-        color:rgb(128, 76, 108)
+        -webkit-text-stroke: 0.4px rgb(255, 0, 0);
+        color:rgb(196, 102, 152)
     }
 
 </style>
@@ -62,7 +62,7 @@
 <div class="container-fluid mt-0">
     <div style="background-color: rgb(152, 52, 129); padding: 2rem; border-radius: 0rem; min-height: 100px; margin: 0;">
     <audio autoplay loop>
-            <source src="{% static '/sounds/labyrinth_hole.mp3' %}" type="audio/mpeg">
+            <source src="{% static '/sounds/crazy.mp3' %}" type="audio/mpeg">
             Your browser does not support audio.
         </audio>
         <h1><span style='color: white;'>The Labyrinth</span></h1></div></div>
@@ -71,14 +71,19 @@
     <br>
     <p><span class='Narrator'><i> . . . </i></span></p>
     <p><span class='Shaquila'>When you open your eyes again, you are lying on the cobblestone path just outside the cottage. The sky is tinted orange with late afternoon light. Your head aches. Your clothes are dusty and your limbs feel heavy. You push yourself up and stumble toward the porch. Your stepmother is there, and turns around to hang up a piece of laundry. When she sees you, her arms cross, and her mouth tightens with anger.</span></p>
-    <p><span class='You'>Where are the berries?</span></p>
-    <p><span class='Mom'></span></p>
-    <p><span class='You'></span></p>
-    <p><span class='You'></span></p>
-    <p><span class='You'></span></p>
-    <p><span class='You'></span></p>
-    <p><span class='You'></span></p>
-    <p><span class='You'></span></p>
-    <a href="/brace_for_landing" class="You">Brace for landing!</a>
-    <a href="/dont_brace_for_landing" class="You">Don't brace for landing!</a>
+    <p><span class='Mom'>Where are the berries?</span></p>
+    <p><span class='Shaquila'>You blink at her, trying to steady your voice. "I fell in a hole into this weird labyrinth. There was a voice. It said I could stop the drought." Your stepmother stares at you, unmoved. Then she laughs, but there is no joy in it. </span></p>
+    <p><span class='Mom'>You expect me to believe that? Voices? Holes? Do you think I am stupid?</span></p>
+    <p><span class='Shaquila'>You shake your head. "I'm not lying. I wanted to help our forest. I really did. I thought I could stop it. I thought I was close... I was lied to ma..."</span></p>
+    <p><span class='Mom'>You're hearing voices now. That's all the information I need to send you away.</span></p>
+    <p><span class='Shaquila'>You feel the tears start before you can stop them. "I tried," you whisper. "I almost did it. I just wanted to protect the flora... please...mom..." You see her expression harden.</span></p>
+    <p><span class='Mom'>I'm glad I finally have an excuse. I've had enough of your stories and your strangeness.</span></p>
+    <p><span class='Shaquila'>By nightfall, you are in the town's asylum. The walls are white. The bed is too clean. The door closes with a soft final sound, and no one looks at you as the lock clicks into place.</span></p>
+    <p><span class='Shaquila'>My mom didn't even say goodbye to me.</span></p>
+    <br>
+    <p><span class='Narrator'><i>You saved the fungi colony! ~✩</i></span></p>
+    <br>
+    <p><span class='Narrator'><b> ENDING 4/4 : VOICES IN MY HEAD .</b></span></p>
+    <br>
+    <a href="/" class="Shaquila">Restart?</a>
 {% endblock %}
