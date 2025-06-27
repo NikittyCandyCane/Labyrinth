@@ -4,27 +4,39 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    return render(request, 'labrynth/home.html')
+    global trust
+    trust = 1
+    return render(request, 'labyrinth/home.html')
 
 def keep_walking(request):
     if request.method == 'POST':
             firstbuttonclicked = True
-            return render(request, 'labrynth/keep_walking.html', context = {'firstbuttonclicked' : firstbuttonclicked})
+            return render(request, 'labyrinth/keep_walking.html', context = {'firstbuttonclicked' : firstbuttonclicked})
         
-    return render(request, 'labrynth/keep_walking.html', context = {'firstbuttonclicked' : False})
+    return render(request, 'labyrinth/keep_walking.html', context = {'firstbuttonclicked' : False})
 
 def asleep1(request):
-     return render(request, 'labrynth/asleep1.html', context = {})
+     return render(request, 'labyrinth/asleep1.html', context = {})
 
-def labrynth_hole(request):
-     return render(request, 'labrynth/labrynth_hole.html', context = {})
+def labyrinth_hole(request):
+     return render(request, 'labyrinth/labyrinth_hole.html', context = {})
+
+def brace_for_landing(request):
+     global trust
+     trust = 2
+     return render(request, 'labyrinth/brace_for_landing.html', context = {})
+
+def dont_brace_for_landing(request):
+     global trust
+     trust = 0
+     return render(request, 'labyrinth/dont_brace_for_landing.html', context = {})
 
 # login function for later if I figure out how forms work...
 #def signup(request):
-#    return render(request, 'labrynth/signup.html', {})
+#    return render(request, 'labyrinth/signup.html', {})
 
 #def login(request)
-#    return render(request, 'labrynth/login.html', {})
+#    return render(request, 'labyrinth/login.html', {})
 
 
 # I'll add in playing as Shaquila later if I have time but I doubt I will ToT

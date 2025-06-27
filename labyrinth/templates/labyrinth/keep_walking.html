@@ -1,4 +1,4 @@
-{% extends 'labrynth/base.html' %}
+{% extends 'labyrinth/base.html' %}
 
     {% block head %}
     {{ block.super }}
@@ -31,10 +31,11 @@
         margin-left: 20px;
     }
     .Shaquila {
+        -webkit-text-stroke: 0.4px rgb(255, 0, 208);
         color: rgb(65, 29, 104)
     }
     .You {
-        -webkit-text-stroke: 0.4px rgb(60, 0, 0);
+        -webkit-text-stroke: 0.4px rgb(255, 0, 0);
         color:rgb(147, 0, 0)
     }
 
@@ -70,6 +71,6 @@
     <p><span class='Shaquila'>"Liar!" Shaquila lashes her arms out in every direction around her. She feels a sharp pain on her right-hand ring finger.</span></p>
     <p><span class='Shaquila'>She gets pricked by a thorn from an anesthetic plant she is too sleepy to recognize...</span></p>
     <br>
-    <a href="/asleep1">She's asleep...</a>
+    <a href="/asleep1" class="You">She's asleep...</a>
     {% endif %}
 {% endblock %}

@@ -1,4 +1,4 @@
-{% extends 'labrynth/base.html' %}
+{% extends 'labyrinth/base.html' %}
 
     {% block head %}
     {{ block.super }}
@@ -29,7 +29,12 @@
         margin-left: 20px;
     }
     .Shaquila {
+        -webkit-text-stroke: 0.4px rgb(255, 0, 208);
         color: rgb(65, 29, 104)
+    }
+    .You {
+        -webkit-text-stroke: 0.4px rgb(255, 0, 0);
+        color:rgb(147, 0, 0)
     }
     .rectangle {
         width: 1200px;
@@ -58,7 +63,7 @@
         <p><span class='Shaquila'>You really wouldn't mind being outside if the outside was as beautiful as it was a year ago.</p></span>
         <p><span class='Shaquila'>Mother Nature's cradles has long since been replaced by a drought, and with her absence the flora has suffered. </p></span>
         <p><span class='Shaquila'>Maybe that Theta Grunberg was right about climate change and what not...</p></span>
-        <a href="/keep_walking">Keep walking...</a>
+        <a href="/keep_walking" class="You">Keep walking...</a>
 
     
 {% endblock %}

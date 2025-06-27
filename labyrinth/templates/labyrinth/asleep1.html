@@ -1,4 +1,4 @@
-{% extends 'labrynth/base.html' %}
+{% extends 'labyrinth/base.html' %}
 
     {% block head %}
     {{ block.super }}
@@ -26,7 +26,7 @@
     }
     a {
         font-size: 20px;
-        margin-left: 20px;
+        margin-left: 40px;
     }
     button {
         margin-left: 20px;
@@ -70,8 +70,12 @@
     <p><span class='zzzYou'>Memory loss...? What do you mean? And how do you know who I am?</span></p>
     <p><span class='Trance'>So you did forget... no worries, I'll fill you in. My name is Trance. We belong to a species of rare fungi called Amerfidelia. The drought you're seeing affect all the plants around you is making our insentient competition for nature's resources weaker. It has been saving our familes lives. We knew the host was plant-obsessed, and often waterred our competition, as well as had intentions of stopping the drought. Then one day, when she was picking berries near the English ivy leaves we grew on, her elbows nudged the leaves and we flew up into the air. After landing on her clothes, we decided to invade her brain, and made a pact we would stop her. Make sure not to tell the host any of this, as she, as well as the rest of mankind, believes that all fungi are not sentient. If they find out about this, they could do more damage to our species than they've already done...</span></p>
     <p><span class='zzzYou'>Geez... that explains a lot. I hope my family is doing okay... How do we stop the host???</span></p>
-    <p><span class='Trance'>I'm in the brain's memory area, and I can tell you anything about the host and the world. You're in the main control area, and can interact with any present thoughts she has. When the host sleeps, you take over their body. You neither can communicate with me nor see or move when she's awake however. Luckily for us, she's speaks quite often in the third person. I think that's one of her weaknesses; her stepmother runs her life, so she speaks in third person to feel more in control. Try to use that weakness to your advantage while trying to manipulate her.</span></p>
+    <p><span class='Trance'>I'm in the brain's memory area, and I can tell you anything about the host and the world. You're in the main control area, and can interact with any present thoughts she has. When she sleeps, you take over her body. You can neither communicate with me nor <i>see</i> or <i>move</i> when she's awake however.</span></p>
+    <br>
+    <p><span class='Trance'>Luckily for us, <b>she's speaks quite often in the second person, even when talking about herself. It seems like she switches to third person when she speaks to you though...</b></span></p>.
+    <p><span class='Trance'>I think that's one of her weaknesses; her stepmother runs her life, so she speaks in second and third person to feel more in control. Try to use that weakness to your advantage while trying to manipulate her.</span></p>.
     <p><span class='zzzYou'>Okay, Trance. I'll try my best to remember all of that for the sake of Amerfidelia.</span></p>
     <br>
-    <a href="/labrynth_hole">Wake up!</a>
+    <a href="/labyrinth_hole" class="zzzYou">Wake up!</a>
+    <br>
 {% endblock %}

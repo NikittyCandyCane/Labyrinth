@@ -1,0 +1,74 @@
+{% extends 'labyrinth/base.html' %}
+
+    {% block head %}
+    {{ block.super }}
+         <title>Awake!</title>
+    <style>
+    body {
+        background-color: rgb(255, 180, 214)
+    }
+    h1 {
+    margin-top: 30px;
+    }
+    h1 {
+        margin-left: 30px;
+    }
+    p {
+        margin-left: 50px;
+        margin-right: 20px;
+        font-size: 20px;
+    }
+    label {
+        margin-left: 20px;
+    }
+    img {
+        margin-left: 0px
+    }
+    a {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    button {
+        margin-left: 20px;
+    }
+    .Shaquila {
+        -webkit-text-stroke: 0.4px rgb(255, 0, 208);
+        color: rgb(65, 29, 104)
+    }
+    .You {
+        -webkit-text-stroke: 0.4px rgb(255, 0, 0);
+        color:rgb(147, 0, 0)
+    }
+    .zzzYou {
+        -webkit-text-stroke: 0.4px rgb(255, 81, 0);
+        color:rgb(109, 0, 0)
+    }
+    .Trance {
+        -webkit-text-stroke: 0.4px rgb(0, 94, 255);
+        color:rgb(148, 248, 255)
+    }
+    .Narrator {
+        color:rgb(0, 0, 0)
+    }
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-0">
+    <div style="background-color: rgb(152, 52, 129); padding: 2rem; border-radius: 0rem; min-height: 100px; margin: 0;">
+<h1><span style='color: white;'>The Labrynth</span></h1></div></div>
+    <br>
+    <p><span class='Narrator'>The feeling that pulls you back into your head is soft and serene. Your eyes close and the feeling in your body begins to numb. The sounds you heard around you fade as well.</span></p>
+    <p><span class='You'>I like this much more than gaining my senses.</span></p>
+    <p><span class='Shaquila'>You yawn peacefully and stretch your arms as a white noise fills your ears.</span></p>
+    <p><span class='You'>You do this even when you've just woken up? You sure are dedicated to your craft.</span></p>
+    <p><span class='Shaquila'>"You're still here!". You start out loud. </span></p>
+    <p><span class='You'>Good morning to you too.</span></p>
+    <p><span class='Shaquila'>"Don't expect me to be happy hearing a voice in my head." You say, and begin to worry that you might be schizophrenic just like your stepmother.</span></p>
+    <p><span class='You'>Don't worry. I don't think you are. I know you are.</span></p>
+    <p><span class='Shaquila'>Your nose wrinkles as she lets out a grumpy sound and gets up from where you laid. Big, ripe black mulberries glint in your peripheral vision, asking to be picked. You walk over and pluck them from their branches, when the floor falls out from beneath you! You're falling, falling, falling!!!</span></p>
+    <br>
+    <a href="/brace_for_landing" class="You">Brace for landing!</a>
+    <a href="/dont_brace_for_landing" class="You">Don't brace for landing!</a>
+{% endblock %}
