@@ -2,10 +2,10 @@
 
     {% block head %}
     {{ block.super }}
-         <title>Dont brace...</title>
+         <title>Brace...</title>
     <style>
     body {
-        background-color: rgb(255, 180, 214)
+        background-color: rgb(214, 185, 255)
     }
     h1 {
     margin-top: 30px;
@@ -15,7 +15,7 @@
     }
     p {
         margin-left: 50px;
-        margin-right: 20px;
+        margin-right: 40px;
         font-size: 20px;
     }
     label {
@@ -27,8 +27,6 @@
     a {
         font-size: 20px;
         margin-left: 20px;
-        -webkit-text-stroke: 0.4px rgb(255, 0, 0);
-        color:rgb(147, 0, 0)
     }
     button {
         margin-left: 20px;
@@ -52,20 +50,34 @@
     .Narrator {
         color:rgb(0, 0, 0)
     }
+    .parrot {
+        -webkit-text-stroke: 0.4px rgb(0, 255, 38);
+        color: rgb(7, 100, 46);
+    }
 
 </style>
 {% endblock %}
 
 {% block content %}
 <div class="container-fluid mt-0">
-    <div style="background-color: rgb(152, 52, 129); padding: 2rem; border-radius: 0rem; min-height: 100px; margin: 0;">
-<h1><span style='color: white;'>The Labrynth</span></h1></div></div>
+    <div style="background-color: rgb(140, 52, 152); padding: 2rem; border-radius: 0rem; min-height: 100px; margin: 0;">
+<h1><span style='color: white;'>The Labyrinth</span></h1></div></div>
     <br>
-    <p><span class='Narrator'></span></p>
-    <p><span class='You'>I like this much more than gaining my senses.</span></p>
-    <p><span class='Shaquila'>She yawns peacefully and stretches her arms as a white noise fills her ears.</span></p>
-
+    <p><span class='Narrator'><i><b>Trust - 1</b></i></span></p>
+    <p><span class='Shaquila'>You ignore the suspicious voice and brace yourself. Luckily for you, the fall is short, and you're caught by many philodendron gloriosum leaves.</span></p>
+    <p><span class='You'>Hey! Why did you ignore me?</span></p>
+    <p><span class='Shaquila'>"I want to protect myself while falling. It's common sense," you grumble. You look up and the hole in the dirt you expect to see is replaced with a great blue sky. You're absolutely shocked!</span></p>
+    <p><span class='You'>Wow! I'm absolutely shocked!</span></p>
+    <p><span class='Shaquila'>You make a face at the voice's awful joke, but it melts away when you scan your surroundings. Tall hedges seem to have just appeared. Just where are you...?</span></p>
+    <p><span class='You'>I have no clue. Maybe you should start exploring, Shaquila.</span></p>
+    <p><span class='Shaquila'>You ignore the voice's comment, but rather uncoolly follow its suggestion. After a couple of turns, it's confirmed that you're in a hedge maze. With the forest vegetation that shielded you back in the forest gone, the sun's heat beats down on you. "It's so hot... and I can already feel the sunburn," you sigh. </span></p>
+    <p><span class='parrot'>"Goodday! Or should I say goodnoon? Or even night? Or morning? What is time anyway!"</span></p>
+    <p><span class='Shaquila'>You look towards where the voice comes form, and spot a tropically green parrot. Your jaw drops! A talking parrot?!?</span></p>
+    <p><span class='parrot'>Caw! You seem hot. I know of a fountain 10 paces South of South from where you face.</span></p>
+    <p><span class='Shaquila'>"South of South? Isn't that just North?"</span></p>
+    <p><span class='parrot'>Hahahah! What a clever cookie you are! Follow me!</span></p>
+    <p><span class='Narrator'>While you don't exactly trust this parrot, your goal isn't to keep Shaquila safe. Then again, this might bring Shaquila further in her journey to stopping the drought. What will you choose to do?</span></p>
     <br>
-    <a href="/brace_for_landing">Brace for landing!</a>
-    <a href="/dont_brace_for_landing">Don't brace for landing!</a>
+    <a href="/follow_parrot" class="You">Follow that parrot Shaquila!</a>
+    <a href="/sketchy_parrot" class="You">Woah woah.... doesn't this seem a little bit sketchy to you?</a>
 {% endblock %}
